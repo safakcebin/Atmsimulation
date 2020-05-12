@@ -1,0 +1,31 @@
+﻿@model int
+@{
+    ViewData["Title"] = "Para Gönderme";
+}
+    <form action="/paragonderme/paragonder">
+        <input type="hidden" name="hesapid" value="@Model" />
+
+        <table>
+            <tr>
+                <td>Gönderilecek Hesap IBAN</td>
+                <td><input type="text" name="iban" style="width:300px" /></td>
+            </tr>
+
+            <tr>
+                <td>Miktar</td>
+
+                <td><input type="number" name="miktar" style="width:300px" /></td>
+            </tr>
+            <tr>
+                <td>Açıklama</td>
+
+                <td><input type="text" name="aciklama" style="width:500px" /></td>
+            </tr>
+            <tr>
+                <td></td>
+
+                <td><input type="submit" value="tamam" /></td>
+            </tr>
+        </table>
+        <a href="/musteribilgileri/index">iptal</a>
+    </form>

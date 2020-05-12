@@ -1,0 +1,66 @@
+﻿@model Hesap
+@{
+    ViewData["Title"] = "Hesap Bilgileri";
+}
+    <div class="text-center">
+        <div class="w3-cell-row">
+
+            <div class="w3-container w3-red w3-cell w3-card" style="padding:10px;width:200px">
+                <h3>@Model.HesapAdi</h3>
+            </div>
+
+            <div class="w3-container w3-green w3-cell w3-card" style="padding:10px">
+                <h3>@Model.IBAN</h3>
+            </div>
+
+            <div class="w3-container w3-blue w3-cell w3-card" style="padding:10px;width:200px">
+                <h3>@ViewBag.Bakiye</h3>
+            </div>
+        </div>
+        <div class="w3-cell-row" style="margin-top:50px">
+
+            <table style="width:100%">
+                <tr>
+                    <td style="width:33%">
+                        <a href="/paragonderme/index?hesapid=@Model.Id" style="width:100%">
+                            <div class="w3-container  w3-cell w3-card" style="padding:10px;width:300px;background-color:#6600cc">
+                                <h3>Para Gönder</h3>
+                            </div>
+                        </a>
+                    </td>
+                    <td style="width:33%">
+                        <a href="/parayatirma/index?hesapid=@Model.Id" style="width:100%">
+
+
+                            <div class="w3-container w3-cell w3-card" style="padding:10px;width:300px;background-color:#ff9966">
+                                <h3>Para Yatır</h3>
+                            </div>
+                        </a>
+                    </td>
+                    <td style="width:33%">
+
+                        <a href="/paracekme/index?hesapid=@Model.Id" style="width:100%">
+                            <div class="w3-container  w3-cell w3-card" style="padding:10px;width:300px;background-color:#996633">
+                                <h3>Para Çek</h3>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+           
+          
+        </div>
+        <a href="/hesaphareketleri/index?hesapid=@Model.Id">
+            <div class="w3-cell-row" style="margin-top:50px">
+
+
+                <div class="w3-container  w3-cell w3-card" style="padding: 10px; background-color: #009900">
+                    <h3>Hesap Hareketleri</h3>
+                </div>
+
+
+            </div>
+        </a>
+
+
+    </div>

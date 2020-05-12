@@ -1,0 +1,19 @@
+﻿@model IEnumerable<HesapHareket>
+@{
+    ViewData["Title"] = "Hesap Hareketleri";
+}
+ <a href="/musteribilgileri/index" style="color:red">Geri Dön</a>
+<br />
+<br />
+
+<table>
+    @foreach(var item in Model){
+    <tr>
+        <td style="width:300px">@item.HareketTipi.ToString()</td>
+        <td style="width:300px">@item.Aciklama</td>
+        <td style="width:300px">@item.Miktar</td>
+        <td style="width:300px">@item.Zaman</td>
+    </tr>        
+    }
+    
+</table>

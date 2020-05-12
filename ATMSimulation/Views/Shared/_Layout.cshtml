@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ATM Simulation</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+
+    <div class="w3-container w3-display-topmiddle" style="width:80%;padding:50px">
+        <h2>ATM Simulation</h2>
+        <div class="w3-card-4" style="width:50%;">
+            <header class="w3-container w3-blue">
+                <h1>@ViewData["Title"] </h1>
+            </header>
+
+            <div class="w3-container" style="padding:50px">
+                @RenderBody()
+            </div>
+
+            <footer class="w3-container w3-blue">
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <span>&copy;Şafak Çebin</span>
+                        </td>
+                        <td width="50px">
+                            <a style="color:red;" href="/giris/cikis">Çıkış</a>
+
+                        </td>
+                    </tr>
+                </table>
+                
+            </footer>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

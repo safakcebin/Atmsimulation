@@ -1,0 +1,42 @@
+﻿@model Musteri
+@{
+    ViewData["Title"] = "Müşteri Bilgileri";
+}
+    <div class="text-center">
+        <div class="w3-cell-row">
+
+            <div class="w3-container w3-red w3-cell w3-card" style="padding:10px">
+                <h1>@Model.Adi @Model.Soyadi</h1>
+            </div>
+
+            <div class="w3-container w3-green w3-cell" style="padding:10px">
+                <h1>@ViewBag.Bakiye</h1>
+            </div>
+
+        </div>
+        @foreach (var item in ViewBag.HesapListesi)
+        {
+            <a href="/hesapbilgileri/index?id=@item.Key.Id">
+                <div class="w3-cell-row" style="margin-top:10px">
+
+                    <div class="w3-container w3-card" style="margin:10px;padding:10px">
+
+
+                        <div class="w3-display-container" style="height:50px;">
+                            <div class="w3-display-left">@item.Key.HesapAdi</div>
+                            <div class="w3-display-middle">@item.Key.IBAN</div>
+                            <div class="w3-display-right">@item.Value</div>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </a>
+        }
+        <a href="/musteribilgileri/index">iptal</a>
+
+
+        </div>

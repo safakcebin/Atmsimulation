@@ -1,0 +1,15 @@
+﻿@model int
+@{
+    ViewData["Title"] = "Para Yatırma";
+}
+
+    <form action="/parayatirma/parayatir">
+        <table>
+            <tr>
+                <input type="hidden" name="hesapid" value="@Model" />
+                <td><input type="number" name="miktar" style="width:300px" /></td>
+                <td><input type="submit" value="tamam" /></td>
+            </tr>
+        </table>
+        <a href="/musteribilgileri/index">iptal</a>
+    </form>
